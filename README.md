@@ -132,7 +132,8 @@ int main(){
 		bar1->Progressed(i);
         std::this_thread::sleep_for (std::chrono::milliseconds(10));
     }
-
+    delete bar1;
+    
 	/// Example 2 ///
 
 	n = 1000;
@@ -146,7 +147,8 @@ int main(){
 		bar2->Progressed(i);
        	std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
-	
+	delete bar2;
+
 	n = 5;
 	ProgressBar bar3(n);
     bar3.Progressed(0);
